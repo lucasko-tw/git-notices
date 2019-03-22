@@ -12,10 +12,21 @@ git filter-branch --prune-empty --subdirectory-filter  ./the/sub_folder/you/want
 git config --get remote.origin.url
 
 git remote -v
+#origin	https://github.com/lucasko-tw/repo-A.git  (fetch)
+#origin	https://github.com/lucasko-tw/repo-A.git  (push)
+
 
 git remote show
 
-git remote set-url origin  https://github.com/lucasko-tw/repo-A.git 
+git remote set-url origin  https://github.com/lucasko-tw/repo-B.git 
 
 git remote -v
+#origin	https://github.com/lucasko-tw/repo-B.git  (fetch)
+#origin	https://github.com/lucasko-tw/repo-B.git  (push)
+
+git add .
+
+git commit -m "migration"
+
+git push
 ```
