@@ -30,3 +30,16 @@ git commit -m "migration"
 
 git push
 ```
+
+
+### Remove files from history commit ; Reduce Size
+
+```
+git filter-branch --force --index-filter   "git rm --cached --ignore-unmatch data/*.zip" --prune-empty --tag-name-filter cat -- --all
+
+git reflog expire --all --expire=now
+git gc --prune=now --aggressive
+
+git push origin --force --all
+
+```
