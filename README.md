@@ -35,9 +35,10 @@ git push
 ### Remove files from history commit ; Reduce Size
 
 ```
-git filter-branch --force --index-filter   "git rm --cached --ignore-unmatch data/*.zip" --prune-empty --tag-name-filter cat -- --all
+git filter-branch --tree-filter "rm -rf A/B/C/D.zip" --prune-empty HEAD
 
 git reflog expire --all --expire=now
+
 git gc --prune=now --aggressive
 
 git push origin --force --all
