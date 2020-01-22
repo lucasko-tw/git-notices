@@ -44,3 +44,26 @@ git gc --prune=now --aggressive
 git push origin --force --all
 
 ```
+
+
+### Merge Branch Into Master with 1 commit
+
+1. you have a branch called feature/A
+2. feature/A has many commits
+3. You want to merge feature/A branch into master with 1 commit.
+
+
+```sh
+git checkout master
+git pull
+
+git checkout -b merge/A
+git merge --squash  feature/A
+git commit # without -m ; remove all contents, then add new content ;
+
+# merge to master
+git checkout master
+git merge merge/A
+git log
+git push
+```
