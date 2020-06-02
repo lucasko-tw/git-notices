@@ -28,6 +28,15 @@ git add .
 
 git commit -m "migration"
 
+
+### Move file and keep history
+
+git filter-branch -f --tree-filter ' `if [ -f "A.txt" ]; then  git mv A.txt  C.txt  ; fi  ` ' HEAD 
+
+
+
+
+
 git push
 ```
 
