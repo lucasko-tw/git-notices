@@ -1,3 +1,24 @@
+### Revert Uncommit codes
+
+```
+
+git checkout .
+
+git checkout -- FILE
+
+```
+
+
+### Stash 
+
+```
+
+git stash save
+
+git stash pop
+
+```
+
 
 ### Migrate Code from Sub Directory of Repo A to Repo B
 
